@@ -6,23 +6,41 @@ public class EnemyPref : MonoBehaviour {
 
     public int enemySpeed;
     //public List<GameObject> objectives; //objetivo final
-    public GameObject player;
+    public List<GameObject> arm;
+    public List<GameObject> objectives;
+    private GameObject player;
+
     public GameObject explosion;
 
-                                       // Use this for initialization
+    // Use this for initialization
     void Start () {
-        
         player = GameObject.Find("CubeMan");
-        /*
         foreach (Transform child in player.transform)
         {
-            objectives.Add(child.gameObject);
+            if (child.name.Contains("Elbow") || child.name.Contains("Wrist") || child.name.Contains("Hand"))
+            {
+                arm.Add(child.gameObject);
+            }
+            else
+            {
+                objectives.Add(child.gameObject);
+            }
+
         }
-        foreach(GameObject name in objectives)
+        /*
+        foreach (GameObject name in objectives)
         {
-            //Debug.Log(name.name);
+            Debug.Log("OBJECTIVE: " + name.name);
+        }
+        foreach (GameObject name in arm)
+        {
+            Debug.Log("ARM: " + name.name);
         }
         */
+        GameObject tempObjective = objectives[Random.RandomRange(0, objectives.Count)].gameObject;
+        Debug.Log("OBJECTIVO ACTUAL: " + tempObjective.name);
+        player = tempObjective;
+
 
     }
 
