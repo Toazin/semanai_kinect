@@ -9,6 +9,7 @@ public class EnemyPref : MonoBehaviour {
     public List<GameObject> arm;
     public List<GameObject> objectives;
     private GameObject player;
+
     public GameObject explosion;
 
     // Use this for initialization
