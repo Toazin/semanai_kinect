@@ -7,6 +7,7 @@ public class EnemyPref : MonoBehaviour {
     public int enemySpeed;
     //public List<GameObject> objectives; //objetivo final
     public GameObject player;
+    public GameObject explosion;
 
                                        // Use this for initialization
     void Start () {
@@ -34,6 +35,7 @@ public class EnemyPref : MonoBehaviour {
 
     void OnCollisionEnter(Collision c)
     {
+        Instantiate(explosion, c.transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
