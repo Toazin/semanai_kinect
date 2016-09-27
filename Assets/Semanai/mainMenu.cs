@@ -13,9 +13,10 @@ public class mainMenu : MonoBehaviour {
 	public Texture2D tutorial;
 	public Texture2D logo;
     public GameObject player;
+   
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -32,5 +33,6 @@ public class mainMenu : MonoBehaviour {
 				click = true;
 				visible=true;
 				}
-	}
+           
+    }
 }

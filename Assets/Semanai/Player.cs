@@ -5,8 +5,6 @@ public class Player : MonoBehaviour {
     private int life;
     private int score;
 
-    public int enemySpeed;
-
     public int Score
     {
         get { return score; }
@@ -23,7 +21,6 @@ public class Player : MonoBehaviour {
     void Update()
     {
         //Debug.Log(objectives[Random.RandomRange(1, 15)].name);
-        transform.Translate(transform.forward * Time.deltaTime * enemySpeed, Space.World);
     }
 
 
