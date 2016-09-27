@@ -17,7 +17,7 @@ public class EnemyPref : MonoBehaviour {
         player = GameObject.Find("CubeMan");
         foreach (Transform child in player.transform)
         {
-            if (child.name.Contains("Elbow") || child.name.Contains("Wrist") || child.name.Contains("Hand"))
+            if (child.name.Contains("Elbow") || child.name.Contains("Wrist") || child.name.Contains("Hand") || child.name.Contains("Foot"))
             {
                 arm.Add(child.gameObject);
             }
@@ -38,7 +38,7 @@ public class EnemyPref : MonoBehaviour {
         }
         */
         GameObject tempObjective = objectives[Random.RandomRange(0, objectives.Count)].gameObject;
-        Debug.Log("OBJECTIVO ACTUAL: " + tempObjective.name);
+        //Debug.Log("OBJECTIVO ACTUAL: " + tempObjective.name);
         player = tempObjective;
 
 
@@ -53,7 +53,7 @@ public class EnemyPref : MonoBehaviour {
 
     void OnCollisionEnter(Collision c)
     {
-        Instantiate(explosion, c.transform.position, Quaternion.identity);
+        Instantiate(explosion, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

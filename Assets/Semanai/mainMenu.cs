@@ -27,12 +27,13 @@ public class mainMenu : MonoBehaviour {
 	void OnGUI(){
 		//skin del GUI
 		GUI.skin = NecromancerGUI;
-        
+            /*
 			GUI.DrawTexture(new Rect(Screen.width/2-Screen.height/4, 30, Screen.height/2f, Screen.height/2.4f), logo, ScaleMode.StretchToFill, true, 10.0F);
-			if (GUI.Button (new Rect (Screen.width/2-100, Screen.height/2, 200, 200), "START")) {
+			if (GUI.Button (new Rect (Screen.width/2-100, Screen.height/6, 50, 50), "START")) {
 				click = true;
 				visible=true;
 				}
+            */
            
     }
 }
